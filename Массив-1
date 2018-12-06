@@ -1,0 +1,21 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int n,mx;
+    double s(0);
+    cin>>n;
+    double x[n];
+        for (int i=0; i<=n-1; i++){
+        cin>>x[i];s+=x[i];
+        }
+        s/=n;
+    sort (x,x+n);
+    if (abs(s-x[0])>fabs(s-x[n-1])) mx=abs(s-x[0]);
+    else mx=fabs(s-x[n-1]);
+    cout<<"sred arifm="<<s<<endl<<"max otklon="<<mx;
+    return 0;
+}
